@@ -1,4 +1,4 @@
-# Consumer API Service with JWT Authorization (Go + PostgreSQL)
+# JWT Auth API Demo
 
 This service provides a secure and efficient RESTful API for managing **consumer data**, built with **Go (Gin framework)** and **PostgreSQL**. It implements **JWT-based authentication and authorization**, ensuring that only authenticated clients can access protected endpoints.
 
