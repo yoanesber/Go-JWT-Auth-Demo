@@ -1,0 +1,9 @@
+# These files and directories will be ignored by Docker when building the image.
+README.md
+Makefile
+*.md
+.gitignore
+.git/
+logs/
+docker/
+.vscode/

@@ -1,0 +1,16 @@
+# File ini digunakan untuk mengkonfigurasi Dependabot
+# untuk melakukan pembaruan otomatis pada dependensi Go modules.
+# Dependabot adalah alat yang membantu menjaga dependensi tetap mutakhir dan aman.
+version: 2
+updates:
+  - package-ecosystem: "gomod"    # Menentukan ekosistem paket yang digunakan
+    directory: "/"                # Direktori tempat file go.mod berada
+    schedule:
+      interval: "weekly"          # Jadwal pembaruan (daily, weekly, monthly)
+      time: "03:00"               # Waktu untuk melakukan pembaruan (opsional)
+      timezone: "UTC"             # Zona waktu untuk waktu pembaruan (opsional)
+    commit-message:
+      prefix: "fix"               # Prefix untuk pesan commit pembaruan
+      include:                    # Menentukan jenis pembaruan yang akan dilakukan
+        - "version-update"        # Pembaruan versi dependensi
+        - "security"              # Pembaruan keamanan

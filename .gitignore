@@ -1,0 +1,57 @@
+HELP.md
+
+### Ignore OS-specific files ###
+.DS_Store
+.DS_Store?
+Thumbs.db
+
+### Ignore logs ###
+logs/
+*.log
+hs_err_pid*
+*.swp
+
+### SENSITVE DATA ###
+.gitconfig
+.env
+cert/
+keys/
+
+### BUILD ###
+./gin-boilerplate
+
+### Binaries / executables (hasil build) ###
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+
+### Ignore Visual Studio Code files ###
+.vscode/
+
+### Ignore temporary files ###
+*.tmp
+*.temp
+
+### Ignore local database files ###
+*.db
+*.h2.db
+*.mv.db
+
+### Docker related ###
+docker-compose.override.yml
+
+### Jenkins-related (if Jenkinsfile logs or workspace cached locally) ###
+.jenkins/
+jenkins-output.log
+
+### AWS-related ###
+*.pem
+.aws/
+credentials.csv
+*.tfstate
+*.tfstate.backup
+.terraform/
+ecs-task-definition-final.json
