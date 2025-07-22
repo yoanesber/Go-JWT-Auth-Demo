@@ -10,6 +10,7 @@ import (
 	"github.com/yoanesber/go-consumer-api-with-jwt/pkg/middleware/authorization"
 	"github.com/yoanesber/go-consumer-api-with-jwt/pkg/middleware/headers"
 	"github.com/yoanesber/go-consumer-api-with-jwt/pkg/middleware/logging"
+	request_filter "github.com/yoanesber/go-consumer-api-with-jwt/pkg/middleware/request-filter"
 	httputil "github.com/yoanesber/go-consumer-api-with-jwt/pkg/util/http-util"
 )
 
@@ -24,6 +25,7 @@ func SetupRouter() *gin.Engine {
 		headers.SecurityHeaders(),
 		headers.CorsHeaders(),
 		headers.ContentType(),
+		request_filter.DetectParameterPollution(),
 		logging.RequestLogger(),
 		gzip.Gzip(gzip.DefaultCompression),
 	)

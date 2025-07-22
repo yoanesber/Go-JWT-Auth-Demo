@@ -19,6 +19,8 @@ type HttpResponse struct {
 }
 
 /***** Basic Responses *****/
+// Created sends a successful response with a 201 Created status.
+// It is typically used when a new resource has been successfully created.
 func Created(c *gin.Context, message string, data interface{}) {
 	c.JSON(http.StatusCreated, HttpResponse{
 		Message:   message,
@@ -30,6 +32,8 @@ func Created(c *gin.Context, message string, data interface{}) {
 	})
 }
 
+// Success sends a successful response with a 200 OK status.
+// It is typically used for successful GET requests or other successful operations.
 func Success(c *gin.Context, message string, data interface{}) {
 	c.JSON(http.StatusOK, HttpResponse{
 		Message:   message,
@@ -41,6 +45,8 @@ func Success(c *gin.Context, message string, data interface{}) {
 	})
 }
 
+// BadRequest sends a 400 Bad Request response.
+// It is typically used when the request cannot be processed due to client error.
 func BadRequest(c *gin.Context, message string, err string) {
 	logger.Error(err, nil)
 
@@ -54,6 +60,8 @@ func BadRequest(c *gin.Context, message string, err string) {
 	})
 }
 
+// NotFound sends a 404 Not Found response.
+// It is typically used when the requested resource cannot be found.
 func NotFound(c *gin.Context, message string, err string) {
 	logger.Error(err, nil)
 
@@ -67,6 +75,8 @@ func NotFound(c *gin.Context, message string, err string) {
 	})
 }
 
+// InternalServerError sends a 500 Internal Server Error response.
+// It is typically used when an unexpected error occurs on the server.
 func InternalServerError(c *gin.Context, message string, err string) {
 	logger.Error(err, nil)
 
@@ -80,6 +90,8 @@ func InternalServerError(c *gin.Context, message string, err string) {
 	})
 }
 
+// Unauthorized sends a 401 Unauthorized response.
+// It is typically used when authentication is required but has failed or has not been provided.
 func Unauthorized(c *gin.Context, message string, err string) {
 	logger.Error(err, nil)
 
@@ -93,6 +105,8 @@ func Unauthorized(c *gin.Context, message string, err string) {
 	})
 }
 
+// Forbidden sends a 403 Forbidden response.
+// It is typically used when the server understands the request but refuses to authorize it.
 func Forbidden(c *gin.Context, message string, err string) {
 	logger.Error(err, nil)
 
@@ -106,6 +120,8 @@ func Forbidden(c *gin.Context, message string, err string) {
 	})
 }
 
+// UnsupportedMediaType sends a 415 Unsupported Media Type response.
+// It is typically used when the server refuses to accept the request because the payload format is invalid.
 func UnsupportedMediaType(c *gin.Context, message string, err string) {
 	logger.Error(err, nil)
 
@@ -119,6 +135,8 @@ func UnsupportedMediaType(c *gin.Context, message string, err string) {
 	})
 }
 
+// MethodNotAllowed sends a 405 Method Not Allowed response.
+// It is typically used when the HTTP method used in the request is not allowed for the requested resource.
 func MethodNotAllowed(c *gin.Context, message string, err string) {
 	logger.Error(err, nil)
 
@@ -132,6 +150,8 @@ func MethodNotAllowed(c *gin.Context, message string, err string) {
 	})
 }
 
+// Conflict sends a 409 Conflict response.
+// It is typically used when a request could not be completed due to a conflict with the current state of the resource.
 func Conflict(c *gin.Context, message string, err string) {
 	logger.Error(err, nil)
 
@@ -145,6 +165,8 @@ func Conflict(c *gin.Context, message string, err string) {
 	})
 }
 
+// TooManyRequests sends a 429 Too Many Requests response.
+// It is typically used when the user has sent too many requests in a given amount of time.
 func TooManyRequests(c *gin.Context, message string, err string) {
 	logger.Error(err, nil)
 
@@ -153,6 +175,21 @@ func TooManyRequests(c *gin.Context, message string, err string) {
 		Error:     err,
 		Path:      c.Request.URL.Path,
 		Status:    http.StatusTooManyRequests,
+		Data:      nil,
+		Timestamp: time.Now(),
+	})
+}
+
+// NoContent sends a 204 No Content response.
+// It is typically used when the server successfully processes the request but does not need to return any content.
+func NoContent(c *gin.Context, message string, err string) {
+	logger.Error(err, nil)
+
+	c.JSON(http.StatusNoContent, HttpResponse{
+		Message:   message,
+		Error:     err,
+		Path:      c.Request.URL.Path,
+		Status:    http.StatusNoContent,
 		Data:      nil,
 		Timestamp: time.Now(),
 	})
@@ -271,6 +308,19 @@ func TooManyRequestsMap(c *gin.Context, message string, err []map[string]string)
 		Error:     err,
 		Path:      c.Request.URL.Path,
 		Status:    http.StatusTooManyRequests,
+		Data:      nil,
+		Timestamp: time.Now(),
+	})
+}
+
+func NoContentMap(c *gin.Context, message string, err []map[string]string) {
+	logger.Error("No Content Map Error", nil)
+
+	c.JSON(http.StatusNoContent, HttpResponse{
+		Message:   message,
+		Error:     err,
+		Path:      c.Request.URL.Path,
+		Status:    http.StatusNoContent,
 		Data:      nil,
 		Timestamp: time.Now(),
 	})

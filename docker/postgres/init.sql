@@ -2,7 +2,7 @@
 CREATE USER appuser WITH PASSWORD 'app@123';
 
 -- Allow user to connect to database
-GRANT CONNECT, TEMP, CREATE ON DATABASE consumer_service TO appuser;
+GRANT CONNECT, TEMP, CREATE ON DATABASE golang_demo TO appuser;
 
 -- Grant permissions on public schema
 GRANT USAGE, CREATE ON SCHEMA public TO appuser;

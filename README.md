@@ -203,7 +203,7 @@ DB_HOST=localhost
 DB_PORT=5432
 DB_USER=appuser
 DB_PASS=app@123
-DB_NAME=consumer_service
+DB_NAME=golang_demo
 DB_SCHEMA=public
 # Options: disable, require, verify-ca, verify-full
 DB_SSL_MODE=disable
@@ -295,7 +295,7 @@ For security reasons, it's recommended to avoid using the default postgres super
 CREATE USER appuser WITH PASSWORD 'app@123';
 
 -- Allow user to connect to database
-GRANT CONNECT, TEMP, CREATE ON DATABASE consumer_service TO appuser;
+GRANT CONNECT, TEMP, CREATE ON DATABASE golang_demo TO appuser;
 
 -- Grant permissions on public schema
 GRANT USAGE, CREATE ON SCHEMA public TO appuser;
