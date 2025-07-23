@@ -1,7 +1,9 @@
 package headers
 
 import (
+	"net/url"
 	"os"
+	"strings"
 	"time"
 
 	"github.com/gin-gonic/gin"
@@ -21,16 +23,39 @@ func CorsHeaders() gin.HandlerFunc {
 
 	var allowedOrigins []string
 	if env == "production" {
-		allowedOrigins = []string{os.Getenv("FRONTEND_URL_PRODUCTION")}
+		allowedOrigins = strings.Split(os.Getenv("FRONTEND_URL_PRODUCTION"), ",")
 	} else {
-		allowedOrigins = []string{os.Getenv("FRONTEND_URL")}
+		allowedOrigins = strings.Split(os.Getenv("FRONTEND_URL"), ",")
 	}
 
 	// Set CORS headers for allowed origins
 	return func(c *gin.Context) {
 		origin := c.Request.Header.Get("Origin")
+		if origin == "" {
+			httputil.BadRequest(c, "Missing Origin", "The request does not have an Origin header")
+			c.Abort()
+			return
+		}
+
+		// Validate the origin URL
+		// Ensure the origin is a valid URL and uses HTTP or HTTPS scheme
+		requestedOrigin, err := url.Parse(origin)
+		if err != nil {
+			httputil.BadRequest(c, "Invalid Origin", "The provided origin is not a valid URL")
+			c.Abort()
+			return
+		}
+		if requestedOrigin.Scheme != "http" && requestedOrigin.Scheme != "https" {
+			httputil.BadRequest(c, "Invalid Origin", "The provided origin must use HTTP or HTTPS scheme")
+			c.Abort()
+			return
+		}
+
+		// Check if the origin is in the allowed origins list
+		// If the origin is allowed, set CORS headers
 		for _, allowed := range allowedOrigins {
-			if origin == allowed {
+			allowedOriginTrimmed := strings.TrimSpace(allowed)
+			if origin == allowedOriginTrimmed || allowedOriginTrimmed == "*" {
 				maxAge := 24 * time.Hour
 				c.Writer.Header().Set("Access-Control-Allow-Origin", origin)
 				c.Writer.Header().Set("Access-Control-Allow-Methods", "GET, POST, PUT, PATCH, DELETE, OPTIONS")
