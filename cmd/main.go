@@ -10,11 +10,11 @@ import (
 	"github.com/gin-gonic/gin"
 	log "github.com/sirupsen/logrus"
 
-	"github.com/yoanesber/go-consumer-api-with-jwt/config/database"
-	"github.com/yoanesber/go-consumer-api-with-jwt/pkg/diagnostics"
-	"github.com/yoanesber/go-consumer-api-with-jwt/pkg/logger"
-	validation "github.com/yoanesber/go-consumer-api-with-jwt/pkg/util/validation-util"
-	"github.com/yoanesber/go-consumer-api-with-jwt/routes"
+	"github.com/yoanesber/go-jwt-auth-demo/config/database"
+	"github.com/yoanesber/go-jwt-auth-demo/pkg/diagnostics"
+	"github.com/yoanesber/go-jwt-auth-demo/pkg/logger"
+	validation "github.com/yoanesber/go-jwt-auth-demo/pkg/util/validation-util"
+	"github.com/yoanesber/go-jwt-auth-demo/routes"
 )
 
 var (

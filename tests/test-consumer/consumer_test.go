@@ -9,10 +9,10 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/stretchr/testify/assert"
 
-	"github.com/yoanesber/go-consumer-api-with-jwt/internal/handler"
-	"github.com/yoanesber/go-consumer-api-with-jwt/internal/service"
-	"github.com/yoanesber/go-consumer-api-with-jwt/pkg/middleware/authorization"
-	httputil "github.com/yoanesber/go-consumer-api-with-jwt/pkg/util/http-util"
+	"github.com/yoanesber/go-jwt-auth-demo/internal/handler"
+	"github.com/yoanesber/go-jwt-auth-demo/internal/service"
+	"github.com/yoanesber/go-jwt-auth-demo/pkg/middleware/authorization"
+	httputil "github.com/yoanesber/go-jwt-auth-demo/pkg/util/http-util"
 )
 
 const (

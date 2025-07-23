@@ -3,7 +3,7 @@ package entity
 import (
 	"gopkg.in/go-playground/validator.v9"
 
-	validation "github.com/yoanesber/go-consumer-api-with-jwt/pkg/util/validation-util"
+	validation "github.com/yoanesber/go-jwt-auth-demo/pkg/util/validation-util"
 )
 
 // LoginRequest represents the request payload for user login.

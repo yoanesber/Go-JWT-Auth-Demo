@@ -3,8 +3,8 @@ package test_consumer
 import (
 	"time"
 
-	"github.com/yoanesber/go-consumer-api-with-jwt/internal/entity"
-	"github.com/yoanesber/go-consumer-api-with-jwt/pkg/customtype"
+	"github.com/yoanesber/go-jwt-auth-demo/internal/entity"
+	"github.com/yoanesber/go-jwt-auth-demo/pkg/customtype"
 )
 
 // getDummyConsumer returns a dummy consumer entity for testing purposes.

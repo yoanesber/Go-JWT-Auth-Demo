@@ -11,10 +11,10 @@ import (
 	"golang.org/x/crypto/bcrypt"
 	"gorm.io/gorm"
 
-	"github.com/yoanesber/go-consumer-api-with-jwt/config/database"
-	"github.com/yoanesber/go-consumer-api-with-jwt/internal/entity"
-	"github.com/yoanesber/go-consumer-api-with-jwt/internal/repository"
-	jwtutil "github.com/yoanesber/go-consumer-api-with-jwt/pkg/util/jwt-util"
+	"github.com/yoanesber/go-jwt-auth-demo/config/database"
+	"github.com/yoanesber/go-jwt-auth-demo/internal/entity"
+	"github.com/yoanesber/go-jwt-auth-demo/internal/repository"
+	jwtutil "github.com/yoanesber/go-jwt-auth-demo/pkg/util/jwt-util"
 )
 
 var (

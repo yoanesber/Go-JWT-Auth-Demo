@@ -8,9 +8,9 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/golang-jwt/jwt/v5"
 
-	metacontext "github.com/yoanesber/go-consumer-api-with-jwt/pkg/context-data/meta-context"
-	httputil "github.com/yoanesber/go-consumer-api-with-jwt/pkg/util/http-util"
-	jwtutil "github.com/yoanesber/go-consumer-api-with-jwt/pkg/util/jwt-util"
+	metacontext "github.com/yoanesber/go-jwt-auth-demo/pkg/context-data/meta-context"
+	httputil "github.com/yoanesber/go-jwt-auth-demo/pkg/util/http-util"
+	jwtutil "github.com/yoanesber/go-jwt-auth-demo/pkg/util/jwt-util"
 )
 
 /**

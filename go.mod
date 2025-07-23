@@ -1,4 +1,4 @@
-module github.com/yoanesber/go-consumer-api-with-jwt
+module github.com/yoanesber/go-jwt-auth-demo
 
 go 1.24.2
 

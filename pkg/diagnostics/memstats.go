@@ -4,7 +4,7 @@ import (
 	"runtime"
 
 	log "github.com/sirupsen/logrus"
-	"github.com/yoanesber/go-consumer-api-with-jwt/pkg/logger"
+	"github.com/yoanesber/go-jwt-auth-demo/pkg/logger"
 )
 
 func LogMemoryStats(stage string) {

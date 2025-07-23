@@ -4,14 +4,14 @@ import (
 	"github.com/gin-contrib/gzip"
 	"github.com/gin-gonic/gin"
 
-	"github.com/yoanesber/go-consumer-api-with-jwt/internal/handler"
-	"github.com/yoanesber/go-consumer-api-with-jwt/internal/repository"
-	"github.com/yoanesber/go-consumer-api-with-jwt/internal/service"
-	"github.com/yoanesber/go-consumer-api-with-jwt/pkg/middleware/authorization"
-	"github.com/yoanesber/go-consumer-api-with-jwt/pkg/middleware/headers"
-	"github.com/yoanesber/go-consumer-api-with-jwt/pkg/middleware/logging"
-	request_filter "github.com/yoanesber/go-consumer-api-with-jwt/pkg/middleware/request-filter"
-	httputil "github.com/yoanesber/go-consumer-api-with-jwt/pkg/util/http-util"
+	"github.com/yoanesber/go-jwt-auth-demo/internal/handler"
+	"github.com/yoanesber/go-jwt-auth-demo/internal/repository"
+	"github.com/yoanesber/go-jwt-auth-demo/internal/service"
+	"github.com/yoanesber/go-jwt-auth-demo/pkg/middleware/authorization"
+	"github.com/yoanesber/go-jwt-auth-demo/pkg/middleware/headers"
+	"github.com/yoanesber/go-jwt-auth-demo/pkg/middleware/logging"
+	request_filter "github.com/yoanesber/go-jwt-auth-demo/pkg/middleware/request-filter"
+	httputil "github.com/yoanesber/go-jwt-auth-demo/pkg/util/http-util"
 )
 
 // SetupRouter initializes the router and sets up the routes for the application.

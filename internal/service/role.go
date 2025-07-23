@@ -3,9 +3,9 @@ package service
 import (
 	"fmt"
 
-	"github.com/yoanesber/go-consumer-api-with-jwt/config/database"
-	"github.com/yoanesber/go-consumer-api-with-jwt/internal/entity"
-	"github.com/yoanesber/go-consumer-api-with-jwt/internal/repository"
+	"github.com/yoanesber/go-jwt-auth-demo/config/database"
+	"github.com/yoanesber/go-jwt-auth-demo/internal/entity"
+	"github.com/yoanesber/go-jwt-auth-demo/internal/repository"
 )
 
 // Interface for role service

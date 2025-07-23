@@ -3,8 +3,8 @@ package authorization
 import (
 	"github.com/gin-gonic/gin"
 
-	metacontext "github.com/yoanesber/go-consumer-api-with-jwt/pkg/context-data/meta-context"
-	httputil "github.com/yoanesber/go-consumer-api-with-jwt/pkg/util/http-util"
+	metacontext "github.com/yoanesber/go-jwt-auth-demo/pkg/context-data/meta-context"
+	httputil "github.com/yoanesber/go-jwt-auth-demo/pkg/util/http-util"
 )
 
 /**

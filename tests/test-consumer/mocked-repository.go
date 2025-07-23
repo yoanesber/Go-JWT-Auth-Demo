@@ -5,7 +5,7 @@ import (
 
 	"gorm.io/gorm" // Import GORM for ORM functionalities
 
-	"github.com/yoanesber/go-consumer-api-with-jwt/internal/entity"
+	"github.com/yoanesber/go-jwt-auth-demo/internal/entity"
 )
 
 // ConsumerMockedRepository is an interface that defines the methods for interacting with consumer data in a mocked repository.

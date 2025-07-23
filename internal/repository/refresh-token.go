@@ -5,7 +5,7 @@ import (
 
 	"gorm.io/gorm"
 
-	"github.com/yoanesber/go-consumer-api-with-jwt/internal/entity"
+	"github.com/yoanesber/go-jwt-auth-demo/internal/entity"
 )
 
 // Interface for refresh token repository

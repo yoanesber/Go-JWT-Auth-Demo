@@ -6,7 +6,7 @@ import (
 	"gopkg.in/go-playground/validator.v9"
 	"gorm.io/gorm"
 
-	validation "github.com/yoanesber/go-consumer-api-with-jwt/pkg/util/validation-util"
+	validation "github.com/yoanesber/go-jwt-auth-demo/pkg/util/validation-util"
 )
 
 // User represents the user entity in the database.

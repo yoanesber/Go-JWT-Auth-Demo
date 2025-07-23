@@ -7,10 +7,10 @@ import (
 	"gopkg.in/go-playground/validator.v9"
 	"gorm.io/gorm"
 
-	"github.com/yoanesber/go-consumer-api-with-jwt/internal/entity"
-	"github.com/yoanesber/go-consumer-api-with-jwt/internal/service"
-	httputil "github.com/yoanesber/go-consumer-api-with-jwt/pkg/util/http-util"
-	validation "github.com/yoanesber/go-consumer-api-with-jwt/pkg/util/validation-util"
+	"github.com/yoanesber/go-jwt-auth-demo/internal/entity"
+	"github.com/yoanesber/go-jwt-auth-demo/internal/service"
+	httputil "github.com/yoanesber/go-jwt-auth-demo/pkg/util/http-util"
+	validation "github.com/yoanesber/go-jwt-auth-demo/pkg/util/validation-util"
 )
 
 // This struct defines the AuthHandler which handles HTTP requests related to authentication.

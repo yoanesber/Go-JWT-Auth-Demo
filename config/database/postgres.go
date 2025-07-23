@@ -10,8 +10,8 @@ import (
 	gormLogger "gorm.io/gorm/logger" // Import GORM logger for logging SQL queries
 	"gorm.io/gorm/schema"
 
-	"github.com/yoanesber/go-consumer-api-with-jwt/internal/entity"
-	"github.com/yoanesber/go-consumer-api-with-jwt/pkg/logger"
+	"github.com/yoanesber/go-jwt-auth-demo/internal/entity"
+	"github.com/yoanesber/go-jwt-auth-demo/pkg/logger"
 )
 
 var (

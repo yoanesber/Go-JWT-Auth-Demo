@@ -5,7 +5,7 @@ import (
 
 	"gopkg.in/go-playground/validator.v9"
 
-	"github.com/yoanesber/go-consumer-api-with-jwt/pkg/customtype"
+	"github.com/yoanesber/go-jwt-auth-demo/pkg/customtype"
 )
 
 const (

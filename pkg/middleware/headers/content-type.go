@@ -6,7 +6,7 @@ import (
 
 	"github.com/gin-gonic/gin"
 
-	httputil "github.com/yoanesber/go-consumer-api-with-jwt/pkg/util/http-util"
+	httputil "github.com/yoanesber/go-jwt-auth-demo/pkg/util/http-util"
 )
 
 /**

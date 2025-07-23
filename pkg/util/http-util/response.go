@@ -5,7 +5,7 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
-	"github.com/yoanesber/go-consumer-api-with-jwt/pkg/logger"
+	"github.com/yoanesber/go-jwt-auth-demo/pkg/logger"
 )
 
 // ErrorResponse represents the structure of an error response.
