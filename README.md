@@ -197,6 +197,8 @@ PORT=1000
 IS_SSL=TRUE
 SSL_KEYS=./cert/mycert.key
 SSL_CERT=./cert/mycert.cer
+FRONTEND_URL=http://localhost:3000,http://localhost:1000,https://localhost:3000,https://localhost:1000
+FRONTEND_URL_PRODUCTION=https://your-production-url.com
 
 # Database configuration
 DB_HOST=localhost
